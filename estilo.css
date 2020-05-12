@@ -56,20 +56,33 @@ header{
     font-size: 1.2em;
 }
 
+
 .menu li span{
     display:block;
-    background:#f2f2f2;
+    background-color:#f2f2f2;
     margin:10px;
     padding:20px;
     text-align:center;
     border-radius:70px;
     width: 20px;
     height: 20px; 
-    border:2px solid #999;
+    border:2px solid #EEE;
+
+
+    background: linear-gradient(180deg,transparent,#f2f2f2 0);
+    background-size: 100% 0px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background .2s;
 }
+
+.menu li:hover span{
+    background-size: 100% 100%;
+}
+
 .menu li img{
     width: 100%;
-    filter: grayscale(100%) opacity(50%);
+    filter: grayscale(100%) invert(1);
     transition: filter 0.5s;
 }
 
@@ -77,9 +90,7 @@ header{
 .menu li:hover img{
     filter: grayscale(0%);
 }
-.menu li:hover span{
-    background:#FEFEFE;
-}
+
 .menu li:hover a{
 text-decoration: underline;
 }
