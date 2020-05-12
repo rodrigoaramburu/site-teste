@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url(img/fundo.jpg);
+    background-attachment: fixed;
+    background-size: 100vw 120vh;
+}
+
+
+p{
+    margin:10px 0;
+    padding:10px;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.menu{
+    position: fixed;
+    top:0px;
+    padding:10px;
+    width: 100vw;
+    background-color: #333E;
+    z-index: 9999;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+.menu li{
+    text-align: center;
+    list-style: none;
+    margin:0 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color:#EEE;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.menu li span{
+    display:block;
+    background:#f2f2f2;
+    margin:10px;
+    padding:20px;
+    text-align:center;
+    border-radius:70px;
+    width: 20px;
+    height: 20px; 
+    border:2px solid #999;
+}
+.menu li img{
+    width: 100%;
+    filter: grayscale(100%) opacity(50%);
+    transition: filter 0.5s;
+}
+
+
+.menu li:hover img{
+    filter: grayscale(0%);
+}
+.menu li:hover span{
+    background:#FEFEFE;
+}
+.menu li:hover a{
+text-decoration: underline;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about h1{
+    transform: rotate(-7deg);
+    color:#333;
+    margin:70px 0
+}
+
+.about h1{
+    font-size: 1.4em !important;
+}
+
+
+.portifolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.portifolio-item{
+    width:300px;
+    margin:10px auto;
+    text-align:center;
+}
+
+.portifolio-item img{
+    width: 230px;
+    height: 230px;
+    object-fit: none; 
+    object-position: center;
+    border-radius:150px;
+    border:13px solid #FFF;
+    box-shadow: 5px 5px 5px #999;
+}
+
+.portifolio-item h3{
+    text-align:center;
+    margin:40px 0;
+}
+
+.portifolio-item p::before{
+    content: url(img/decoracao.png);
+    position:relative;
+    top:-40px;
+    margin: auto;
+    display: block;
+}
+
+.portifolio-item p{
+    padding: 10px;
+    background:#FFF;
+    border-radius:10px;
+    height: 200px;
+    line-height: 24px;
+}
+
+
+@media (min-width: 900px) {
+    .about h1{
+        font-size: 2em !important;
+    }
+    .menu li span{
+        width: 30px;
+        height: 30px;
+    }
+
+    .container{
+        width: 900px;
+        margin:auto;
+    }
+
+    .portifolio{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
